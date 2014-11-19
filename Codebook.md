@@ -2,7 +2,7 @@
 
 The following variables are set from run_analysis.R for the source data "UCI HAR Dataset" from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. Please refer to README.md for additional details.
 
-### Tidy_Unmelted_Data.txt
+## Tidy_Unmelted_Data.txt
 
 Column Name      | Variable Type  | Description
  --------------- | -------------  | ------------- 
@@ -13,7 +13,7 @@ Column Name      | Variable Type  | Description
 "tBodyAcc_mean_Z"| numeric |
 "tBodyAcc_std_X" | numeric |
 "tBodyAcc_std_Y" | numeric |
-"tBodyAcc_std_Z" |
+"tBodyAcc_std_Z" | numeric |
 "tGravityAcc_mean_X"| numeric |
 "tGravityAcc_mean_Y"| numeric |
 "tGravityAcc_mean_Z"| numeric |
@@ -86,5 +86,24 @@ Column Name      | Variable Type  | Description
 "fBodyBodyGyroMag_meanFreq"| numeric |
 "fBodyBodyGyroJerkMag_mean"| numeric |
 "fBodyBodyGyroJerkMag_std"| numeric |
-"fBodyBodyGyroJerkMag_meanFreq" numeric |
+"fBodyBodyGyroJerkMag_meanFreq"| numeric |
 
+The column names are transformed from corresponding names in "features.txt" in the original data set by replacing "-" by "_" and removing "()".
+
+## Tidy_Melted_Data.txt
+
+Column Name      | Variable Type  | Description
+ --------------- | -------------  | ------------- 
+ "Subject_ID"    | numeric        | Subject Id Numbers (1 to 30)
+ "Activity_Name" | factor         | Activities: WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING
+ "Feature"       | factor         | The column names listed above 
+ "Feature_Value" | numeric        | feature value
+ 
+ ## Tidy_Melted_Mean_Data.txt
+ 
+ Column Name      | Variable Type  | Description
+ --------------- | -------------  | ------------- 
+ "Subject_ID"    | numeric        | Subject Id Numbers (1 to 30)
+ "Activity_Name" | factor         | Activities: WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING
+ "Feature"       | factor         | The column names listed above 
+ "Mean_Value"    | numeric        | mean value of each feature
