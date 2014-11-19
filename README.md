@@ -1,6 +1,8 @@
 # Course Project - Getting and Cleaning Data
 
-## Name: Xiaoyi Liu
+## Name
+
+Xiaoyi (Leo) Liu
 
 ## Project Description
 
