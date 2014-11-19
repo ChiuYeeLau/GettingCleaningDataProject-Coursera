@@ -99,7 +99,7 @@ Column Name      | Variable Type  | Description
  "Feature"       | factor         | The column names listed above 
  "Feature_Value" | numeric        | feature value
  
- ## Tidy_Melted_Mean_Data.txt
+## Tidy_Melted_Mean_Data.txt
  
  Column Name      | Variable Type  | Description
  --------------- | -------------  | ------------- 
