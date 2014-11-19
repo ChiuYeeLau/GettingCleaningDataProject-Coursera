@@ -1,6 +1,6 @@
 # Course Project - Getting and Cleaning Data 
 
-For the provided UCI HAR Dataset the following vars are set from run_analysis.R. See the README for additional details.
+The following variables are set from run_analysis.R for the provided data "UCI HAR Dataset". Please refer to README.md for additional details.
 
 ## Course Project
 
