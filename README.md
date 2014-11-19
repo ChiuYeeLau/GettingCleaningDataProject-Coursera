@@ -27,9 +27,11 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ## R Version
 
 platform       x86_64-w64-mingw32
+
 arch           x86_64
-os             mingw32
-system         x86_64, mingw32
+
+>os             mingw32
+>system         x86_64, mingw32
 status
 major          3
 minor          1.1
