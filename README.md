@@ -26,12 +26,14 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 ## R Version
 
-platform       x86_64-w64-mingw32
+>platform       x86_64-w64-mingw32
 
-arch           x86_64
+>arch           x86_64
 
 >os             mingw32
+
 >system         x86_64, mingw32
+
 status
 major          3
 minor          1.1
@@ -43,6 +45,3 @@ language       R
 version.string R version 3.1.1 (2014-07-10)
 nickname       Sock it to Me
 
-## Notes
-
-R scripts are written in Windows 7. 
