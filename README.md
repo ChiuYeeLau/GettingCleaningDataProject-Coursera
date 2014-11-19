@@ -24,32 +24,68 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
  5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
  6. 
 
+## R Script
+
+run_analysis.R
+
+## R Script Walkthrough
+
+0. Start the project of Getting and Cleaning Data ~
+
+1. Set working directory and download file ~
+
+2. Unzip downloaded file ~
+
+3. Set path of unzipped data set ~
+
+4. Read data files ~
+
+5. Set names for data frames ~
+
+6. Merge two data sets by rows to create one data set ~
+
+7. Extract only the measurements on the mean and standard deviation for each measurement ~
+
+8. Use descriptive activity names to name the activities in the data set ~
+
+9. Label the data set with descriptive variable names appropriately ~
+
+10. Create a second, independent tidy data set with the average of each variable for each activity and each subject ~
+
+11. Save the tidy and complete data files ~
+
+12. The project of Getting and Cleaning Data is done ~
+
+
 ## R Version
 
->platform       x86_64-w64-mingw32
+platform       x86_64-w64-mingw32
 
->arch           x86_64
+arch           x86_64
 
->os             mingw32
+os             mingw32
 
->system         x86_64, mingw32
+system         x86_64, mingw32
 
->status
+status
 
->major          3
+major          3
 
->minor          1.1
+minor          1.1
 
->year           2014
+year           2014
 
->month          07
+month          07
 
->day            10
+day            10
 
->svn rev        66115
+svn rev        66115
 
->language       R
+language       R
 
->version.string R version 3.1.1 (2014-07-10)
+version.string R version 3.1.1 (2014-07-10)
 
->nickname       Sock it to Me
+nickname       Sock it to Me
+
+## Running
+
