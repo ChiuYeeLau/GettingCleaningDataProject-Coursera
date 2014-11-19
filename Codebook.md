@@ -4,10 +4,10 @@ The following variables are set from run_analysis.R for the source data "UCI HAR
 
 ### Tidy_Unmelted_Data.txt
 
-Variable Name | Variable Type  | Values | Description
+Column Name    | Variable Type  | Values | Description
  ------------- | -------------  | ------------- | ------------- 
- subject       | numerical      | 1:30  	     | Subject id numbers
- activityName  | factor with 6 levels        | WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING | Links the class labels with their activity name. (from: https://github.com/dholtz/GettingAndCleaningData/blob/master/project_data/activity_labels.txt)
+ Subject_ID    | numeric        | 1:30  	     | Subject Id Numbers
+ Activity_Name | factor         | WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING | Links the class labels with their activity name. (from: https://github.com/dholtz/GettingAndCleaningData/blob/master/project_data/activity_labels.txt)
 **Features/Measures** | **numeric** | **Features/Measures are normalized and bounded within [-1,1].** | **Mean or standard deviation of the triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration**
 tBodyAcc-mean()-X |
 tBodyAcc-mean()-Y |
