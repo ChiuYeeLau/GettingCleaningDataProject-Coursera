@@ -86,6 +86,3 @@ language       R
 version.string R version 3.1.1 (2014-07-10)
 
 nickname       Sock it to Me
-
-## Running
-
