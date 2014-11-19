@@ -34,14 +34,22 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 >system         x86_64, mingw32
 
-status
-major          3
-minor          1.1
-year           2014
-month          07
-day            10
-svn rev        66115
-language       R
-version.string R version 3.1.1 (2014-07-10)
-nickname       Sock it to Me
+>status
 
+>major          3
+
+>minor          1.1
+
+>year           2014
+
+>month          07
+
+>day            10
+
+>svn rev        66115
+
+>language       R
+
+>version.string R version 3.1.1 (2014-07-10)
+
+>nickname       Sock it to Me
