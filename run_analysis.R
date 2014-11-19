@@ -106,9 +106,9 @@ names (Melt_Mean_Data_Set) [4] = "Mean_Value"
 # Part 11: Save tidy data file2
 message ("11. Save the tidy and complete data files ~")
 
-write.csv(Data_Set, paste(Project_Path,"Tidy_Unmelted_Data.txt",sep="/"), row.names=FALSE)
-write.csv(Melt_Data_Set, paste(Project_Path,"Tidy_Melted_Data.txt",sep="/"), row.names=FALSE)
-write.csv(Melt_Mean_Data_Set, paste(Project_Path,"Tidy_Melted_Mean_Data.txt",sep="/"), row.names=FALSE)
+write.table(Data_Set, paste(Project_Path,"Tidy_Unmelted_Data.txt",sep="/"), row.names=FALSE)
+write.table(Melt_Data_Set, paste(Project_Path,"Tidy_Melted_Data.txt",sep="/"), row.names=FALSE)
+write.table(Melt_Mean_Data_Set, paste(Project_Path,"Tidy_Melted_Mean_Data.txt",sep="/"), row.names=FALSE)
 
 # Part 12: The project is done
 message ("12. The project of Getting and Cleaning Data is done ~")
