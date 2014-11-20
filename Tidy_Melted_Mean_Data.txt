@@ -1,4 +1,4 @@
-"Subject_ID" "Activity_Name" "Feature" "Mean_Value"
+"SubjectID" "ActivitName" "Feature" "MeanValue"
 1 "LAYING" "tBodyAcc_mean_X" 0.22159824394
 1 "LAYING" "tBodyAcc_mean_Y" -0.0405139534294
 1 "LAYING" "tBodyAcc_mean_Z" -0.11320355358
