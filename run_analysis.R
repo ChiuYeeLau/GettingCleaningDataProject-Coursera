@@ -50,13 +50,13 @@ y_Test = read.table (file = paste (Data_Set_Path, "/test/", "y_test.txt", sep = 
 # Part 5: Set names for data frames
 message ("5. Set names for data frames ~")
 
-names (Subject_Train) = "Subject_ID"
-names (Subject_Test) = "Subject_ID"
+names (Subject_Train) = "SubjectID"
+names (Subject_Test) = "SubjectID"
 
 names (x_Train) = Feature [, 2]
-names (y_Train) = "Activity_Label"
+names (y_Train) = "ActivityLabel"
 names (x_Test) = Feature [, 2]
-names (y_Test) = "Activity_Label"
+names (y_Test) = "ActivityLabel"
 
 # Part 6: Merge two data sets by rows to create one data set
 message ("6. Merge two data sets by rows to create one data set ~")
@@ -70,38 +70,39 @@ Complete_Data_Set = cbind (Subject_Complete_Set, y_Complete_Set, x_Complete_Set)
 # Part 7: Extract only the measurements on the mean and standard deviation for each measurement
 message ("7. Extract only the measurements on the mean and standard deviation for each measurement ~")
 
-Data_Set = Complete_Data_Set [, grepl("Subject_ID|Activity_Label|mean|std", names (Complete_Data_Set))]
+Data_Set = Complete_Data_Set [, grepl("SubjectID|ActivityLabel|mean|std", names (Complete_Data_Set))]
 
 # Part 8: Uses descriptive activity names to name the activities in the data set
 message ("8. Use descriptive activity names to name the activities in the data set ~")
 
 Activity_Label_Set = read.table (file = paste (Data_Set_Path, "activity_labels.txt", sep = "/"))
-names (Activity_Label_Set) = c("Activity_Label", "Activity_Name")
+names (Activity_Label_Set) = c("ActivityLabel", "ActivityName")
 
-Data_Set = merge (x = Activity_Label_Set, y = Data_Set, by.x = "Activity_Label", by.y = "Activity_Label")
+Data_Set = merge (x = Activity_Label_Set, y = Data_Set, by.x = "ActivityLabel", by.y = "ActivityLabel")
 Data_Set_Name = names (Data_Set)
-Data_Set_Name [c(1:3)] = c("Subject_ID", "Activity_Label", "Activity_Name")
+Data_Set_Name [c(1:3)] = c("SubjectID", "ActivityLabel", "ActivityName")
 Data_Set = Data_Set [Data_Set_Name]
 
-Data_Set = Data_Set [with(Data_Set, order (Subject_ID, Activity_Label)), ]
+Data_Set = Data_Set [with(Data_Set, order (SubjectID, ActivityLabel)), ]
 
 # Part 9: Label the data set with descriptive variable names appropriately
 message ("9. Label the data set with descriptive variable names appropriately ~")
 
-names(Data_Set) <- gsub("[-]", "_", names(Data_Set))
+names(Data_Set) <- gsub("[-]", "", names(Data_Set))
 names(Data_Set) <- gsub("[()]", "", names(Data_Set))
 
 # Part 10: Create a second, independent tidy data set with the average of each variable for each activity and each subject
 message ("10. Create a second, independent tidy data set with the average of each variable for each activity and each subject ~")
 
-Data_Set = subset(Data_Set, select = - Activity_Label)
+Data_Set = subset(Data_Set, select = - ActivityLabel)
 
 require (reshape2)
-Melt_Data_Set = melt(Data_Set, c("Subject_ID", "Activity_Name"))
-names (Melt_Data_Set)[c(3, 4)] = c("Feature", "Feature_Value") 
+Melt_Data_Set = melt(Data_Set, c("SubjectID", "ActivityName"))
+names (Melt_Data_Set)[c(3, 4)] = c("Feature", "FeatureValue") 
 
-Melt_Mean_Data_Set = ddply(Melt_Data_Set, names (Melt_Data_Set)[c(1 : 3)], summarise, mean(Feature_Value))
-names (Melt_Mean_Data_Set) [4] = "Mean_Value"
+library (plyr)
+Melt_Mean_Data_Set = ddply(Melt_Data_Set, names (Melt_Data_Set)[c(1 : 3)], summarise, mean(FeatureValue))
+names (Melt_Mean_Data_Set) [4] = "MeanValue"
 
 # Part 11: Save tidy data file2
 message ("11. Save the tidy and complete data files ~")
